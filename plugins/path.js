@@ -14,9 +14,14 @@ module.exports = function(opts){
 			}
 			var parsed = path.parse(file.filename);
 			if(parsed.ext.toLowerCase() === '.md') {
-				parsed.ext = '.html';
-				delete parsed.base;
-				file.path = path.join('/', path.format(parsed));
+				if(parsed.base === 'index.md') {
+					file.path = parsed.dir;
+				}
+				else {
+					parsed.ext = '.html';
+					delete parsed.base;
+					file.path = path.join('/', path.format(parsed));
+				}
 			}
 			else {
 				file.path = file.filename;
