@@ -6,9 +6,7 @@ layout: post.html
 collection: tutorials
 ---
 
-# What is the difference between map, filter, and forEach and when should they be used?
-
-forEach, filter and map methods are used when I want to run some code once for each item in an array. There are four things we need to keep track of when using these array methods:
+`forEach`, `filter` and `map` methods are used when I want to run some code once for each item in an array. There are four things we need to keep track of when using these array methods:
 
 1. The original array
 2. The method
