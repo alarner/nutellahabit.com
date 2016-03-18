@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Aaron Larner's blog - nutellahabit.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='http://fonts.googleapis.com/css?family=Lora:400,700|Merriweather|Raleway' rel='stylesheet' type='text/css'>
+		<link href="/assets/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="content">
+			<div id="margins">
+				<%- include('../includes/header.html') %>
+				<div id="right">
+					<div class="blog-articles">
+						<%
+						pagination
+						.files
+						.forEach(function(post){
+							if(post.category) { %>
+							<article class="blog-article">
+								<header class="blog-article-header">
+									<h1 class="blog-article-title"><a href="<%= post.path %>"><%= post.title %></a></h1>
+									<div class="blog-article-info">
+										<span class="published-date"><%= post.date %></span> - Aaron Larner
+										
+											- <a href="/<%= post.category %>/1" class="blog-article-category"><%= post.category %></a>
+										
+									</div>
+								</header>
+								<section class="blog-article-body">
+									<%= post.description %> <a href="<%= post.path %>">read more</a>
+								</section>
+							</article>
+						<% }}); %>
+					</div>
+					<nav>
+						<%
+						pagination
+						.getPages(5)
+						.forEach(function(page) { %>
+							<a href="/<%= category+'/'+ page.pagination.num %>" class="btn"><%= page.pagination.name %></a>
+						<% }); %>
+					</nav>
+				</div>
+				<%- include('../includes/left.html') %>
+			</div>
+		</div>
+	</body>
+	<!-- 900-include=/includes/ga.html -->
+</html>
