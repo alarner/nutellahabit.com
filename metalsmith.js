@@ -12,14 +12,6 @@ var path = require('./plugins/path');
 var category = require('./plugins/category');
 
 module.exports = Metalsmith(__dirname)
-.use(dateFormatter({
-	dates: [
-		{
-			key: 'date',
-			format: 'MMMM Do YYYY'
-		}
-	]
-}))
 .use(filenames())
 .use(collections({
 	posts: {
@@ -27,6 +19,14 @@ module.exports = Metalsmith(__dirname)
 		sortBy: 'date',
 		reverse: true
 	}
+}))
+.use(dateFormatter({
+	dates: [
+		{
+			key: 'date',
+			format: 'MMMM Do YYYY'
+		}
+	]
 }))
 .use(assets({
 	source: './assets',
