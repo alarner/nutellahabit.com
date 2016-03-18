@@ -7,10 +7,19 @@ var collections = require('metalsmith-collections');
 var filenames = require('metalsmith-filenames');
 var prism = require('metalsmith-prism');
 var pagination = require('metalsmith-pagination');
+var dateFormatter = require('metalsmith-date-formatter');
 var path = require('./plugins/path');
 var category = require('./plugins/category');
 
 module.exports = Metalsmith(__dirname)
+.use(dateFormatter({
+	dates: [
+		{
+			key: 'date',
+			format: 'MMMM Do YYYY'
+		}
+	]
+}))
 .use(filenames())
 .use(collections({
 	posts: {
