@@ -4,7 +4,6 @@ description: One of my students loves Arnold Schwarzenegger. He's come up with a
 date: 2016-03-31
 layout: post.html
 collection: teaching
-hidden: true
 ---
 
 One of my students loves Arnold Schwarzenegger. He's come up with a great analogy inspired by [The Governator](https://www.google.com/search?q=The+Governator) himself for getting good at programming. You've got to get your reps in!
