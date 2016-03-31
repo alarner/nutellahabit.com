@@ -9,6 +9,8 @@ hidden: true
 
 One of my students loves Arnold Schwarzenegger. He's come up with a great analogy inspired by [The Governator](https://www.google.com/search?q=The+Governator) himself for getting good at programming. You've got to get your reps in!
 
+<iframe src="//giphy.com/embed/W7dBXzbnEpOBG" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 One of the toughest thing to wrap your head around when you're first learning to program is loops, so if you're just getting started coding, do yourself a favor and get these 25 JavaScript loop reps in today.
 
 ### 1. What will be console.logged?
