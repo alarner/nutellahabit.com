@@ -16,7 +16,7 @@
 						<% var filtered = collections
 						.posts
 						.filter(function(post) {
-							return post.category;
+							return post.category && !post.hidden;
 						});
 						for(var i=0; i < Math.min(filtered.length, 10); i++) {
 							var post = filtered[i]; %>

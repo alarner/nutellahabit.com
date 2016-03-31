@@ -16,7 +16,7 @@
 						pagination
 						.files
 						.forEach(function(post){
-							if(post.category) { %>
+							if(post.category && !post.hidden) { %>
 							<article class="blog-article">
 								<header class="blog-article-header">
 									<h1 class="blog-article-title"><a href="<%= post.path %>"><%= post.title %></a></h1>

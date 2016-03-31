@@ -19,6 +19,13 @@ h2 {
 	font-family: 'Raleway', serif;
 }
 
+h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #6B6B6B;
+	margin-bottom: 0.888em;
+}
+
 hr {
 	margin: 16px 0;
 }
@@ -56,6 +63,47 @@ li {
 
 strong {
 	font-weight: bold;
+}
+
+body {
+	pre {
+		background-color: #F7F7F7;
+		padding: 1.5em;
+		white-space: pre-wrap;
+		margin-bottom: 1em;
+
+		code {
+			background-color: transparent;
+
+			&::before {
+				content: '';
+			}
+
+			&::after {
+				content: '';
+			}
+		}
+	}
+
+	code {
+		background-color: rgba(0,0,0,0.04);
+		padding: 0.2em 0;
+
+		&[class*="language-"] {
+			text-shadow: none;
+			white-space: pre-wrap;
+		}
+
+		&::before {
+			letter-spacing: -0.2em;
+			content: "\00a0";
+		}
+
+		&::after {
+			letter-spacing: -0.2em;
+			content: "\00a0";
+		}
+	}
 }
 
 .btn {
@@ -126,6 +174,10 @@ strong {
 
 .description {
 	font-size: 15px;
+}
+
+.blog-article {
+	margin-bottom: 3em;
 }
 
 .blog-article-title {
