@@ -28,6 +28,7 @@ module.exports = Metalsmith(__dirname)
 		}
 	]
 }))
+.use(path())
 .use(assets({
 	source: './assets',
 	destination: './assets' 
@@ -37,7 +38,6 @@ module.exports = Metalsmith(__dirname)
 	langPrefix: 'language-'
 }))
 .use(prism())
-.use(path())
 .use(pagination({
 	'collections.posts': {
 		perPage: 10,
@@ -80,6 +80,13 @@ module.exports = Metalsmith(__dirname)
 		first: 'list.html',
 		path: 'web-development/:num/index.html',
 		pageMetadata: { category: 'web-development' }
+	},
+	'collections.openSource': {
+		perPage: 10,
+		layout: 'list.html',
+		first: 'list.html',
+		path: 'open-source/:num/index.html',
+		pageMetadata: { category: 'open-source' }
 	}
 }))
 .use(category())

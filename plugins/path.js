@@ -20,12 +20,13 @@ module.exports = function(opts){
 				else {
 					parsed.ext = '.html';
 					delete parsed.base;
-					file.path = path.join('/', path.format(parsed));
+					file.path = path.format(parsed);
 				}
 			}
 			else {
 				file.path = file.filename;
 			}
+			file.path = path.join('/', file.path);
 		}
 		done();
 	};
