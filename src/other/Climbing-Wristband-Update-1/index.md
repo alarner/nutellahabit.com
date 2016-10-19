@@ -36,7 +36,7 @@ A handful of you were concerned that there would be a lot of data input for you 
 
 If you're interested in chatting with me about any of these things above or anything else related to the project feel free to shoot me an email (anlarner@gmail.com).
 
-If you're a Reddit user you can also [join the discusssion on Reddit]()
+If you're a Reddit user you can also [join the discusssion on Reddit](https://www.reddit.com/r/climbing/comments/586p7h/hey_reddit_climbers_a_few_weeks_ago_i_shared_my/)
 
 <hr>
 
